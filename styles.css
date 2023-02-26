@@ -1,0 +1,131 @@
+:root {
+  --h1-color: hsl(0, 0%, 0%);
+  --bg-color: #00b4d8;
+  --header-color: #dddddd;
+  --link-visited-color: #bbb;
+  --not-visited-color: #bb0000;
+  --text-color: #444;
+  --bg-gradient: linear-gradient(90deg, rgb(0, 198, 255) 0%, rgb(0, 114, 255) 100%);
+
+
+}
+
+
+/* global */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  color: var(--header-color);
+}
+
+body {
+  background: hsla(232, 73%, 65%, 1);
+
+  background: linear-gradient(90deg, hsla(232, 73%, 65%, 1) 0%, hsla(279, 33%, 48%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(232, 73%, 65%, 1) 0%, hsla(279, 33%, 48%, 1) 100%);
+
+  background: -webkit-linear-gradient(90deg, hsla(232, 73%, 65%, 1) 0%, hsla(279, 33%, 48%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#6274E7", endColorstr="#8752A3", GradientType=1);
+  padding: 0 10%;
+}
+
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+
+}
+
+header h1 {
+  font-size: 30px
+}
+
+a {
+  text-decoration: none;
+  padding: 0 10px 0 0;
+}
+
+
+/* features */
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 80px;
+  padding: 30px 0;
+}
+
+
+.feature-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+}
+
+.feature-img img {
+  height: 400px;
+  width: auto;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  h2 {
+    font-size: 30px;
+  }
+
+
+
+  .features {
+    display: block;
+  }
+
+
+  .feature-img {
+    margin: -80px;
+  }
+
+  .feature-img img {
+
+    min-width: 631px;
+  }
+
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+  }
+}
+
+
+/* courses */
+
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.courses span {
+  display: flex;
+  margin: 20px;
+}
